@@ -49,4 +49,19 @@ echo "{$cursos['backend'][1]}<br>";
   $teacher='Italo';
   $Italo='Profesor de PHP';
 
-  echo "$teacher es ${$teacher}";
+  echo "$teacher es ${$teacher}<br>";
+
+  /**
+   * Variables Variables
+   * fusionando con
+   * datos más
+   * complejos
+   */
+
+   function getTeacher(){
+       return 'teacher';
+   }
+
+   $teacher='Italo';
+
+   echo "{${getTeacher()}} enseña PHP";

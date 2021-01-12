@@ -21,3 +21,32 @@ $post="Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, consectet
 $extraccion=substr($post,0,20);
 
 echo "$extraccion... [ver más]<br>";
+
+/**
+ * Creando más ejemplos cuquis
+ * dividiendo un string
+ * en piezas con un 
+ * divisor
+ */
+
+ $data='javascript, php, laravel';
+ $tags=explode(', ',$data);
+
+ echo '<ul>';
+ foreach ($tags as $key => $palabra) {
+     # code...
+     echo "<li>$palabra</li>";
+ }
+ echo '</ul>';
+
+ /**
+  * Convirtiendo una array
+  * en n cantidad de
+  * strings
+  */
+
+  $cursos=['javascript','php','laravel'];
+
+  $implosion = implode(', ',$cursos);
+
+  echo "<p>$implosion</p>";

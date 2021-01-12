@@ -32,6 +32,28 @@ echo "<p>$primerelementominuscula</p>";
   */
 
   $codigo=39;
-  $factura=str_pad($codigo, 8, "#");
+  $factura=str_pad($codigo, 8, "#",STR_PAD_BOTH);
 
-  echo $codigo;
+  echo $factura;
+
+  /**
+   * Eliminador de tags para
+   * proteger paginas de
+   * ataques
+   */
+
+   $textohtml='<h1>Papu, soy o no soy grande?</h1>';
+   echo $textohtml;
+   echo strip_tags($textohtml);
+
+   /**
+    * Datos de distintos bytes
+    */
+
+    $españita="PHP es un lenguaje, año 2021, programación";
+
+    $ESPANIA = strtoupper($españita); //monobyte
+    $ESPAÑA = mb_strtoupper($españita); //multibyte
+
+    echo "<p>$ESPANIA</p>";
+    echo "<p>$ESPAÑA</p>";

@@ -40,4 +40,13 @@ echo "{$cursos['backend'][1]}<br>";
 
  $user= new Usuario;
 
- echo "$user->name quiere aprender {$cursos['backend'][1]}";
+ echo "$user->name quiere aprender {$cursos['backend'][0]}<br>";
+
+ /**
+  * Ahora usando variables variables
+  */
+
+  $teacher='Italo';
+  $Italo='Profesor de PHP';
+
+  echo "$teacher es ${$teacher}";

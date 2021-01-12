@@ -27,4 +27,17 @@ $cursos=[
 *más complejos
 */
 
-echo "{$cursos['backend'][1]}";
+echo "{$cursos['backend'][1]}<br>";
+
+/**
+ * Veamos con las clases
+ * es más complejo
+ */
+
+ class Usuario{
+     public $name = 'Franciso José';
+ }
+
+ $user= new Usuario;
+
+ echo "$user->name quiere aprender {$cursos['backend'][1]}";

@@ -11,4 +11,8 @@ $password='123456';
  */
 $expreg='/^[0-9]{6,9}$/';
 
-echo preg_match($expreg,$password);
+if (preg_match($expreg,$password)) {
+    echo 'La contraseña tiene un formato correcto';
+} else{
+    echo 'La contraseña no tiene un formato correcto';
+}

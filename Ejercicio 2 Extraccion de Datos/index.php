@@ -50,3 +50,13 @@ echo "$extraccion... [ver más]<br>";
   $implosion = implode(', ',$cursos);
 
   echo "<p>$implosion</p>";
+
+  /**
+   * Comprobando la funcion trim
+   * para eliminar espacios
+   * en blanco
+   */
+
+   $course="  Curso de PHP   ";
+   $course=trim($course);
+   echo "<p>Quiero aprender $course, y más</p>";

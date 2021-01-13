@@ -53,3 +53,36 @@ function upper($curso, $llave){
 echo '<ul>';
 array_walk($courses,'upper');
 echo '</ul>';
+
+/**
+ * funciones de array complejo
+ */
+
+//Existe cierta llave?
+ if (array_key_exists('frontend', $courses)) {
+     echo '<p>La llave existe</p>';
+ } else {
+    echo '<p>La llave no existe</p>';
+ }
+
+
+ //Existe cierto valor?
+ if (in_array('javascript', $courses)) {
+    echo '<p>El valor existe</p>';
+} else {
+   echo '<p>El valor no existe</p>';
+}
+
+//Que llaves hay?
+echo '<ul>';
+foreach (array_keys($courses) as $key => $curso) {
+    echo "<li>$curso</li>";
+}
+echo '</ul>';
+
+//Que valores hay?
+echo '<ul>';
+foreach (array_values($courses) as $key => $curso) {
+    echo "<li>$curso</li>";
+}
+echo '</ul>';

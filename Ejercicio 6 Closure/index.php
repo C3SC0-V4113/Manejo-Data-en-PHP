@@ -9,10 +9,12 @@ $saludar=function($name){
     return "Hola, $name";
 };
 
-echo $saludar('Cesco');
+echo '<p>'.$saludar('Cesco').'<p>';
 
 /**
  * Funcion regular combinada con
+ * anonima, Closure siginifa
+ * que recibira una funcion
  * anonima
  */
 function greet(Closure $lang, $name){
@@ -27,5 +29,5 @@ $en=function($name){
     return "Hello, $name";
 };
 
-echo greet($es, 'Cecy');
-echo greet($en,'Olinda');
+echo '<p>'.greet($es, 'Cecy').'<p>';
+echo '<p>'.greet($en,'Olinda').'<p>';

@@ -86,3 +86,33 @@ foreach (array_values($courses) as $key => $curso) {
     echo "<li>$curso</li>";
 }
 echo '</ul>';
+
+/**
+ * Ejercicio con array_walk
+ */
+
+ $alumnos=[
+     [
+         'nombre'=>'Francisco Valle',
+         'nota'=>9
+     ],
+     [
+         'nombre'=>'Karla Ramos',
+         'nota'=>7
+     ],
+     [
+         'nombre'=>'Linus Torvald',
+         'nota'=>4
+     ]
+ ];
+
+ function Aprobacion($alumnos){
+     //Se usan corchetes por tener una capa de complejidad mayor
+     if ($alumnos['nota']>=6) {
+         echo "<p>El alumno {$alumnos['nombre']} ha aprobado</p>";
+     } else {
+        echo "<p>El alumno {$alumnos['nombre']} ha reprobado</p>";
+     }
+ }
+
+ array_walk($alumnos,'Aprobacion');

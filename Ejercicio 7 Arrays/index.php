@@ -93,14 +93,17 @@ echo '</ul>';
 
  $alumnos=[
      [
+         'pronombre-s'=>'El',
          'nombre'=>'Francisco Valle',
          'nota'=>9
      ],
      [
+         'pronombre-s'=>'La',
          'nombre'=>'Karla Ramos',
          'nota'=>7
      ],
      [
+         'pronombre-s'=>'El',
          'nombre'=>'Linus Torvald',
          'nota'=>4
      ]
@@ -109,10 +112,17 @@ echo '</ul>';
  function Aprobacion($alumnos){
      //Se usan corchetes por tener una capa de complejidad mayor
      if ($alumnos['nota']>=6) {
-         echo "<p>El alumno {$alumnos['nombre']} ha aprobado</p>";
+         echo "<p>{$alumnos['pronombre-s']} alumn@ {$alumnos['nombre']} ha aprobado</p>";
      } else {
-        echo "<p>El alumno {$alumnos['nombre']} ha reprobado</p>";
+        echo "<p>{$alumnos['pronombre-s']} alumn@ {$alumnos['nombre']} ha reprobado</p>";
      }
  }
 
  array_walk($alumnos,'Aprobacion');
+
+ /**
+  * OUTPUT:
+  * El alumn@ Francisco Valle ha aprobado
+  * La alumn@ Karla Ramos ha aprobado
+  * El alumn@ Linus Torvald ha reprobado
+  */

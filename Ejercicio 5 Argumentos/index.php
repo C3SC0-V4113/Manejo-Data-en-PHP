@@ -26,6 +26,15 @@ path($cursos);
 echo '<p>'.$cursos.'</p>'; //Laravel
 
 //Predeterminado
+
+/**
+ * Es buena practica usar
+ * return y mala practica
+ * usar exit() pues
+ * termina la
+ * ejecucion
+ */
+
 function holi($name='Cesco'){
     return "Holi, $name";
 }

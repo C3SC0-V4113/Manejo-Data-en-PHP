@@ -56,3 +56,81 @@ foreach (array_chunk($personas,$n) as $key => $arreglo) {
  * Practicando distintos metodos más
  * complejos de las arrays
  */
+
+ /**
+  * array_shift para eliminar solo
+  * el primer elemento de
+  * un array
+  */
+ array_shift($personas);
+echo '<ul>';
+foreach ($personas as $key => $persona) {
+    echo "<li>$persona</li>";
+}
+echo '</ul>';
+
+/**
+ * Utilizando Pop para eliminar
+ * el ultimo elemento
+ */
+
+$personas=['Francisco','Italo','Karla','Cecilia','Juan','Carlos'];
+array_pop($personas);
+echo '<ul>';
+foreach ($personas as $key => $persona) {
+    echo "<li>$persona</li>";
+}
+echo '</ul>';
+
+/**
+ * utilizando unshift para
+ * agregar elementos
+ * al principio de
+ * un arreglo
+ */
+
+$personas=['Francisco','Italo','Karla','Cecilia','Juan','Carlos'];
+array_unshift($personas,'Olinda','Carolina');
+echo '<ul>';
+foreach ($personas as $key => $persona) {
+    echo "<li>$persona</li>";
+}
+echo '</ul>';
+
+/**
+ * Utilizando push para agregar
+ * elementos al final de
+ * un arreglo
+ */
+
+$personas=['Francisco','Italo','Karla','Cecilia','Juan','Carlos'];
+array_push($personas,'Olinda','Carolina');
+echo '<ul>';
+foreach ($personas as $key => $persona) {
+    echo "<li>$persona</li>";
+}
+echo '</ul>';
+
+/**
+ * Utilizando flip para intercambiar
+ * valores por las llaves
+ */
+
+ $persons=[
+     'Valle'=>'Francisco',
+     'Valle'=>'Karla',
+     'Morales'=>'Italo',
+     'Ramos'=>'Cecilia'
+];
+
+echo '<ul>';
+foreach ($persons as $key => $persona) {
+    echo "<li>$persona</li>";
+}
+echo '</ul>';
+
+echo '<ul>';
+foreach (array_flip($persons) as $key => $persona) {
+    echo "<li>$persona</li>";
+}
+echo '</ul>';

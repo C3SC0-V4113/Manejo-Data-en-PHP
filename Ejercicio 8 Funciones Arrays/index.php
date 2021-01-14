@@ -2,6 +2,8 @@
 
 //Sort normal
 
+echo '<h1>Sort normal</h1>';
+
 $courses=['php','javascript','laravel'];
 sort($courses); //rsort() para reversible
 
@@ -12,6 +14,8 @@ foreach ($courses as $key => $curso) {
 echo '</ul>';
 
 //Sort por llaves
+
+echo '<h1>Sort por llaves</h1>';
 
 $cursos=[
     10=>'php',
@@ -32,6 +36,8 @@ echo '</ul>';
  * n cantidad de porciones
  */
 
+echo '<h1>Usando Slice</h1>';
+
 echo '<ul>';
 foreach (array_slice($cursos,1) as $key => $curso) {
     echo "<li>$curso</li>";
@@ -42,6 +48,9 @@ echo '</ul>';
  * Usando chunk, este divide el arreglo
  * en n cantidad de arreglos
  */
+
+echo '<h1>Usando Chunk</h1>';
+
 $personas=['Francisco','Italo','Karla','Cecilia','Juan','Carlos'];
 $n=2;
 foreach (array_chunk($personas,$n) as $key => $arreglo) {
@@ -62,7 +71,9 @@ foreach (array_chunk($personas,$n) as $key => $arreglo) {
   * el primer elemento de
   * un array
   */
- array_shift($personas);
+
+echo '<h1>Usando Shift</h1>';
+array_shift($personas);
 echo '<ul>';
 foreach ($personas as $key => $persona) {
     echo "<li>$persona</li>";
@@ -73,6 +84,8 @@ echo '</ul>';
  * Utilizando Pop para eliminar
  * el ultimo elemento
  */
+
+echo '<h1>Usando Pop</h1>';
 
 $personas=['Francisco','Italo','Karla','Cecilia','Juan','Carlos'];
 array_pop($personas);
@@ -89,6 +102,8 @@ echo '</ul>';
  * un arreglo
  */
 
+echo '<h1>Usando unshift</h1>';
+
 $personas=['Francisco','Italo','Karla','Cecilia','Juan','Carlos'];
 array_unshift($personas,'Olinda','Carolina');
 echo '<ul>';
@@ -103,6 +118,8 @@ echo '</ul>';
  * un arreglo
  */
 
+echo '<h1>Usando push</h1>';
+
 $personas=['Francisco','Italo','Karla','Cecilia','Juan','Carlos'];
 array_push($personas,'Olinda','Carolina');
 echo '<ul>';
@@ -115,6 +132,8 @@ echo '</ul>';
  * Utilizando flip para intercambiar
  * valores por las llaves
  */
+
+echo '<h1>Usando flip</h1>';
 
  $persons=[
      'Valle'=>'Francisco',

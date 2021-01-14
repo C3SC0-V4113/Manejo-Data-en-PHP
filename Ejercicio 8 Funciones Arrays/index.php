@@ -42,8 +42,17 @@ echo '</ul>';
  * Usando chunk, este divide el arreglo
  * en n cantidad de arreglos
  */
+$personas=['Francisco','Italo','Karla','Cecilia','Juan','Carlos'];
+$n=2;
+foreach (array_chunk($personas,$n) as $key => $arreglo) {
+    echo '<ol>';
+    foreach ($arreglo as $key => $value) {
+        echo "<li>$value</li>";
+    }
+    echo '</ol>';
+}
 
-var_dump(array_chunk($courses,3));
-
-//Elimina el primer elemento y lo retorna
-array_shift($courses);
+/**
+ * Practicando distintos metodos más
+ * complejos de las arrays
+ */

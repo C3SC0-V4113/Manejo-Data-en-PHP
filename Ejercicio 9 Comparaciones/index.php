@@ -53,3 +53,67 @@ foreach (array_diff_assoc($colores2,$colores1) as $key => $value) {
     echo "<li>$value</li>";
 }
 echo '</ul>';
+
+/**
+ * UNIONES
+ */
+
+echo '<h1>UNIONES</h1>';
+
+echo '<h1>Union por suma</h1>';
+
+/**
+ * Para que no se sobreescriban elementos
+ * con la misma clave, estas se
+ * cambian manualmente
+ */
+
+$frontend=[
+    'frontend'=>'javascript'
+];
+$backend=[
+    'backend'=>'php',
+    'framework'=>'laravel'
+];
+
+/**
+ * Usando una suma de arreglos
+ */
+
+echo '<ul>';
+foreach (($frontend+$backend) as $key => $value) {
+    echo "<li>$value</li>";
+}
+echo '</ul>';
+
+echo '<h1>Union por Merge</h1>';
+
+/**
+ * Otro tipo de Union
+ */
+$frontend=['javascript'];
+$backend=['php','laravel'];
+
+echo '<ul>';
+foreach (array_merge($frontend,$backend) as $key => $value) {
+    echo "<li>$value</li>";
+}
+echo '</ul>';
+
+/**
+ * Llaves pero son string
+ */
+
+ /**
+ * Otro tipo de Union
+ */
+$frontend=['javascript'];
+$backend=['php','laravel'];
+
+echo '<ol>';
+foreach (array_merge_recursive($frontend,$backend) as $key => $arreglo) {
+    foreach ($arreglo as $key => $value) {
+        echo "<li>$value</li>";
+    }
+}
+echo '</ol>';
